@@ -12,190 +12,190 @@ const HealthCare =  () => {
     const[patientTreatment , setpatientTreatment] = useState("")
     const [CurrentPatientId , setCurrentPatientId] = useState()
     const [allRecord , setAllRecord] = useState([])
-    const contractAdress = "0xBc155394E58A75b918BB98e8323b7D0FcDFA2682";
+    const contractAdress = "0x6066362c80b9f4ee6f646a8f63ef66ee734d299b";
     const contractABI = [
-        {
-            "inputs": [
-                {
-                    "internalType": "uint256",
-                    "name": "patientID",
-                    "type": "uint256"
-                },
-                {
-                    "internalType": "string",
-                    "name": "_patient_name",
-                    "type": "string"
-                },
-                {
-                    "internalType": "string",
-                    "name": "_diagnosis",
-                    "type": "string"
-                },
-                {
-                    "internalType": "string",
-                    "name": "_treatment",
-                    "type": "string"
-                }
-            ],
-            "name": "addPatientRecord",
-            "outputs": [],
-            "stateMutability": "nonpayable",
-            "type": "function"
-        },
-        {
-            "inputs": [
-                {
-                    "internalType": "address",
-                    "name": "provider",
-                    "type": "address"
-                }
-            ],
-            "name": "authorizeTheProvider",
-            "outputs": [],
-            "stateMutability": "nonpayable",
-            "type": "function"
-        },
-        {
-            "inputs": [],
-            "stateMutability": "nonpayable",
-            "type": "constructor"
-        },
-        {
-            "inputs": [
-                {
-                    "internalType": "address",
-                    "name": "",
-                    "type": "address"
-                }
-            ],
-            "name": "authorizedUser",
-            "outputs": [
-                {
-                    "internalType": "bool",
-                    "name": "",
-                    "type": "bool"
-                }
-            ],
-            "stateMutability": "view",
-            "type": "function"
-        },
-        {
-            "inputs": [
-                {
-                    "internalType": "uint256",
-                    "name": "_patient_id",
-                    "type": "uint256"
-                }
-            ],
-            "name": "fetchAllRecords",
-            "outputs": [
-                {
-                    "components": [
-                        {
-                            "internalType": "uint256",
-                            "name": "record_id",
-                            "type": "uint256"
-                        },
-                        {
-                            "internalType": "string",
-                            "name": "patient_name",
-                            "type": "string"
-                        },
-                        {
-                            "internalType": "string",
-                            "name": "diagnosis",
-                            "type": "string"
-                        },
-                        {
-                            "internalType": "string",
-                            "name": "treatment",
-                            "type": "string"
-                        },
-                        {
-                            "internalType": "uint256",
-                            "name": "timestamp",
-                            "type": "uint256"
-                        }
-                    ],
-                    "internalType": "struct HealthCareSystem.Record[]",
-                    "name": "",
-                    "type": "tuple[]"
-                }
-            ],
-            "stateMutability": "view",
-            "type": "function"
-        },
-        {
-            "inputs": [],
-            "name": "getOwner",
-            "outputs": [
-                {
-                    "internalType": "address",
-                    "name": "",
-                    "type": "address"
-                }
-            ],
-            "stateMutability": "view",
-            "type": "function"
-        },
-        {
-            "inputs": [],
-            "name": "owner",
-            "outputs": [
-                {
-                    "internalType": "address",
-                    "name": "",
-                    "type": "address"
-                }
-            ],
-            "stateMutability": "view",
-            "type": "function"
-        },
-        {
-            "inputs": [
-                {
-                    "internalType": "uint256",
-                    "name": "",
-                    "type": "uint256"
-                },
-                {
-                    "internalType": "uint256",
-                    "name": "",
-                    "type": "uint256"
-                }
-            ],
-            "name": "patientRecords",
-            "outputs": [
-                {
-                    "internalType": "uint256",
-                    "name": "record_id",
-                    "type": "uint256"
-                },
-                {
-                    "internalType": "string",
-                    "name": "patient_name",
-                    "type": "string"
-                },
-                {
-                    "internalType": "string",
-                    "name": "diagnosis",
-                    "type": "string"
-                },
-                {
-                    "internalType": "string",
-                    "name": "treatment",
-                    "type": "string"
-                },
-                {
-                    "internalType": "uint256",
-                    "name": "timestamp",
-                    "type": "uint256"
-                }
-            ],
-            "stateMutability": "view",
-            "type": "function"
-        }
-    ]
+	{
+		"inputs": [
+			{
+				"internalType": "uint256",
+				"name": "patient_Id",
+				"type": "uint256"
+			},
+			{
+				"internalType": "string",
+				"name": "_patient_name",
+				"type": "string"
+			},
+			{
+				"internalType": "string",
+				"name": "_diagnosis",
+				"type": "string"
+			},
+			{
+				"internalType": "string",
+				"name": "_treatment",
+				"type": "string"
+			}
+		],
+		"name": "addPatientRecord",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "address",
+				"name": "provider",
+				"type": "address"
+			}
+		],
+		"name": "authorizeTheProvier",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [],
+		"stateMutability": "nonpayable",
+		"type": "constructor"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "address",
+				"name": "",
+				"type": "address"
+			}
+		],
+		"name": "authorizedProviders",
+		"outputs": [
+			{
+				"internalType": "bool",
+				"name": "",
+				"type": "bool"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "uint256",
+				"name": "_patient_Id",
+				"type": "uint256"
+			}
+		],
+		"name": "fetchAllRecord",
+		"outputs": [
+			{
+				"components": [
+					{
+						"internalType": "uint256",
+						"name": "record_id",
+						"type": "uint256"
+					},
+					{
+						"internalType": "string",
+						"name": "patient_name",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "diagnosis",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "treatment",
+						"type": "string"
+					},
+					{
+						"internalType": "uint256",
+						"name": "timestamp",
+						"type": "uint256"
+					}
+				],
+				"internalType": "struct HeathCareSystem.Record[]",
+				"name": "",
+				"type": "tuple[]"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [],
+		"name": "getOwner",
+		"outputs": [
+			{
+				"internalType": "address",
+				"name": "",
+				"type": "address"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [],
+		"name": "owner",
+		"outputs": [
+			{
+				"internalType": "address",
+				"name": "",
+				"type": "address"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "uint256",
+				"name": "",
+				"type": "uint256"
+			},
+			{
+				"internalType": "uint256",
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"name": "patientRecords",
+		"outputs": [
+			{
+				"internalType": "uint256",
+				"name": "record_id",
+				"type": "uint256"
+			},
+			{
+				"internalType": "string",
+				"name": "patient_name",
+				"type": "string"
+			},
+			{
+				"internalType": "string",
+				"name": "diagnosis",
+				"type": "string"
+			},
+			{
+				"internalType": "string",
+				"name": "treatment",
+				"type": "string"
+			},
+			{
+				"internalType": "uint256",
+				"name": "timestamp",
+				"type": "uint256"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	}
+]
 
     
 
